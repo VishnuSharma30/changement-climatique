@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Le Changement Climatique</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="style.css">
+<script src="website.js"></script>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-bar-block w3-light-grey w3-animate-opacity w3-text-black w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+  <h3 class="w3-padding-64 w3-center"><b>LE<br>CHANGEMENT<br>ClIMATIQUE</b></h3>
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large">CLOSE</a>
+  <a href="#" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a> 
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT ME</a> 
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+  <span class="w3-left w3-padding">Le Changement Climatique</span>
+  <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px">
+
+  <!-- Push down content on small screens --> 
+  <div class="w3-hide-large" style="margin-top:83px"></div>
+  
+  <!-- Photo grid -->
+  <div class="w3-row">
+    <div class="w3-third">
+      <div class="zoom"><img src="https://images.theconversation.com/files/292578/original/file-20190916-19030-1c91vdb.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=926&fit=clip" style="width:100%" onclick="onClick(this)" alt="La Pollution"></div>
+      <div class="zoom"><img src="https://foresttech.events/wp-content/uploads/2017/07/Clipboard0124-1-864x486.jpg" style="width:100%" onclick="onClick(this)" alt="Feu De Forêt"></div>
+      <div class="zoom"><img src="https://assets.nrdc.org/sites/default/files/styles/full_content--retina/public/media-uploads/enrpresc1_000048714798_2400.jpg?itok=yse4Tgwe" style="width:100%" onclick="onClick(this)" alt="Mine De Sables Bitumineux"></div>
+    </div>
+
+    <div class="w3-third">
+      <div class="zoom"><img src="https://cleantechnica.com/files/2020/02/Alberta-tar-sands-from-space.jpg" style="width:100%" onclick="onClick(this)" alt="Differance En Mines Aux Alberta De L'Espace"></div>
+      <div class="zoom"><img src="https://static01.nyt.com/images/2020/07/23/business/00nordstream-1/00nordstream-1-articleLarge.jpg?quality=75&auto=webp&disable=upscale" style="width:100%" onclick="onClick(this)" alt="Les Pipelines"></div>
+      <div class="zoom"><img src="https://smartcdn.prod.postmedia.digital/montrealgazette/wp-content/uploads/2019/03/afp_1eo3sp.jpg" style="width:100%" onclick="onClick(this)" alt="Maninfestations A Montreal"></div>
+    </div>
+    
+    <div class="w3-third">
+      <div class="zoom"><img src="https://media.nationalgeographic.org/assets/photos/000/272/27281_c0-41-990-701_r1050x700.jpg?d4ccf3044d9da0d0118103be3a76bd1319370847" style="width:100%" onclick="onClick(this)" alt="La Pollution"></div>
+      <div class="zoom"><img src-"tps://media.nationalgeographic.org/assets/photos/199/936/966a6644-a092-4ec0-899f-f6bb377af14b.jpg" style="width:100%" onclick="onClick(this)" alt="Le Pollution Dans L'Ocean"></div>
+      <div class="zoom"><img src="https://media1.s-nbcnews.com/i/newscms/2018_16/2405901/180420-coral-great-barrier-reef-mn-1340_fa9155024dde8055738325d556a34cf3.jpg" style="width:100%" onclick="onClick(this)" alt="Récif corallien mort"></div>
+    </div>
+  </div>
+
+  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-gray" style="padding-top:0" onclick="this.style.display='none'">
+    <button class="w3-button w3-teal w3-xlarge w3-display-topright">×</button>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div>
+
+  <!-- About section -->
+  <div class="w3-container w3-dark-gray w3-center w3-text-light-grey w3-padding-32" id="about">
+    <div class="about w3-half">
+      <img src="IMG_E1624.JPG" alt="Me" class="w3-image w3-padding-25" width="375" height="400">
+    </div>
+    <div class="w3-half" style="max-width:600px">
+      <div class="about"><h2>Hey, I'm Vishnu!</h2></div>
+      <p>
+     As you can see above, I love science, and entrepreneurship. I am currently a student attending Kitchener Waterloo Collegiate And Vocational School and
+        I am in the ninth grade. I have always had an interest in the sciences and space, as a child my dream was to become an astronaut and it still is and this led me to pave
+        my own path into learning about the sciences outside of school. I am a Executive for Refill a business for snack delivery and a member of the flowboat entrepreneurship club.
+        <br><br>In my free time I love to play basketball (huge warriors fan) and work out, I love sports in general but mostly basketball and boxing, I also love to spend time
+        with family and friends and long drives. <br><br>In some of my free time I just take a break and learn new thing I love learning like how I am currently learning to code and
+        also how I partially coded this website. Hopefully that helped you learn a little bit more about me!
+    </div>
+    
+        <div class="w3-container">
+      <hr class="w3-opacity">
+      <h3 class="w3-padding-16">Some things I'm a Part of!</h3>
+      <div class="w3-row">
+        <div class="w3-quarter w3-padding-16">
+          <div class="w3-card-4 w3-hover-red" style="width:90%">
+            <a href="https://www.flowboat.ca/">
+              <img src="https://raw.githubusercontent.com/SowadK25/SowadK25.github.io/master/images/flowboat_presentationLogo.png" alt="Flowboat" class="w3-center" style="width:90%">
+            </a>
+            <div class="w3-container w3-center">
+              <p>Flowboat Startup Accelerator</p>
+            </div>
+          </div>
+        </div>
+
+    <div class="w3-quarter w3-padding-16">
+          <div class="w3-card-4 w3-hover-red" style="width:90%">
+            <a href="https://refillonline.github.io/">
+              <img src="https://cdn.discordapp.com/attachments/772201659212365895/785299716623040512/iconRefillemoji.png" alt="Refill" class="w3-center" style="width:90%">
+            </a>
+            <div class="w3-container w3-center">
+              <p>ReFill Executive</p>
+            </div>
+          </div>
+        </div>
+    
+    <div class="w3-quarter w3-padding-16">
+          <div class="w3-card-4 w3-hover-red" style="width:90%">
+            <a href="https://kci.wrdsb.ca/">
+              <img src="https://upload.wikimedia.org/wikipedia/en/a/ad/Kci_logo.png" alt="Refill" class="w3-center" style="width:90%">
+            </a>
+            <div class="w3-container w3-center">
+              <p>Student At Kitchener Waterloo Collegiate and Vocational School</p>
+            </div>
+          </div>
+        </div>
+  <!-- Footer -->
+  <footer class="w3-container w3-padding-32 w3-grey" id="contact">  
+    <div class="w3-row-padding">
+      <div class="w3-third">
+        <h3 class="w3-center">CONTACT ME</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://mail.google.com/mail/u/0/?view=cm&fs=1&tf=1&to&su">
+              <img src="https://github.com/SowadK25/SowadK25.github.io/blob/master/images/gmail.png?raw=true" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Email</span><br>
+            <span>vishnushar06@gmail.com</span>
+          </li>
+
+          <li class="w3-padding-16 w3-hover-black">
+            <img src="https://github.com/SowadK25/SowadK25.github.io/blob/master/images/phone.png?raw=true" class="w3-left w3-margin-right" style="width:50px">
+            <span class="w3-large">Phone</span><br>
+            <span>Coming Soon</span>
+          </li> 
+        </ul> 
+      </div>
+    
+      <div class="w3-third">
+        <h3 class="w3-center">VISIT MY SOCIAL MEDIA</h3>
+        <ul class="w3-ul">
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.instagram.com/vishnuxsharma/?hl=en">
+              <img src="https://github.com/SowadK25/SowadK25.github.io/blob/master/images/instagram.png?raw=true" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Instagram</span><br>
+            <span>Follow me!</span>
+          </li>
+
+          <li class="w3-padding-16 w3-hover-black">
+            <a href="https://www.linkedin.com/in/vishnu-sharma-7834a11b4/trk=people-guest_people_search-card">
+              <img src="https://github.com/SowadK25/SowadK25.github.io/blob/master/images/linkedin.png?raw=true" class="w3-left w3-margin-right" style="width:50px">
+            </a>
+            <span class="w3-large">Linkedin</span><br>
+            <span>Connect with me!</span>
+          </li> 
+        </ul>
+      </div>
+
+      <div class="w3-third">
+
+    </div>
+
+    <div class="w3-container">
+      <hr class="w3-opacity">
+      <h5><script type="text/javascript" src="website.js"></script></h5>
+    </div>
+  </footer>
+
+</body>
+</html>
